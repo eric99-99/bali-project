@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
         	EmployeeSeeder::class,
-        	// ExperienceSeeder::class,
+        	ExperienceSeeder::class
         ]);
     }
 }

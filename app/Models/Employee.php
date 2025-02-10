@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'id';
+    protected $guarded =['id'];
     public $timestamps = false;
+
+    public function experinces()
+    {
+        return $this->hasMany(Experience::class, 'employee_id','id');
+    }
+
 }

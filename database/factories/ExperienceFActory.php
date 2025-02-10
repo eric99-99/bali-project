@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ExperienceFActory extends Factory
+class ExperienceFactory extends Factory
 {
     /**
      * Define the model's default state.php artisan cache:config
@@ -15,9 +15,9 @@ class ExperienceFActory extends Factory
     {
         return [
             'employee_id' => $this->faker->unique()->numberBetween(1, \App\Models\Employee::count()),
-            'company_name' => $this->faker->sentence,
+            'company_name' => $this->faker->company,
             'start_date' =>$this->faker->dateTime()->format('Y-m-d'),
-            'job_description' => $this->faker->sentence,
+            'job_description' => $this->faker->jobTitle,
         ];
     }
 }

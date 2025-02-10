@@ -22,7 +22,7 @@ class CreateExperiencesTable extends Migration
             $table->text('job_description')->nullable(false);
         });
         Schema::table('experiences', function($table) {
-            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees');
         });
 
     }

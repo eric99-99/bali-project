@@ -1,0 +1,23 @@
+### get all employee ##
+GET http://127.0.0.1:8000/api/employee
+
+### add new employee ##
+POST http://127.0.0.1:8000/api/employee
+Content-Type: application/json
+
+{
+    "fullname": "dani",
+    "email": "adi@ida14.34com",
+    "mobilephone": "08123456789",
+    "date_of_birth": "1990-01-01",
+    "address": "Jl. Contoh No.12"
+}
+
+### Delete Employee with specific employee id#
+
+POST http://127.0.0.1:8000/api/employee/11/delete
+
+
+### get data employee with id ##
+
+GET http://127.0.0.1:8000/api/employee/2
