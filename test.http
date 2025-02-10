@@ -1,6 +1,22 @@
 ### get all employee ##
 GET http://127.0.0.1:8000/api/employee
 
+
+##response
+{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "fullname": "Mrs. Jordane Hintz",
+      "email": "darrion16@example.org",
+      "mobilephone": "(990) 930-3742",
+      "date_of_birth": "1982-01-14",
+      "address": "176 Isaiah Hollow Apt. 573"
+    },
+  ]
+}
+
 ### add new employee ##
 POST http://127.0.0.1:8000/api/employee
 Content-Type: application/json
@@ -13,16 +29,47 @@ Content-Type: application/json
     "address": "Jl. Contoh No.12"
 }
 
+##response
+{
+  "status": "success",
+  "message": "Employee added successfully",
+  "data": {
+    "fullname": "dani",
+    "email": "adi@ida14.34com",
+    "mobilephone": "08123456789",
+    "date_of_birth": "1990-01-01",
+    "address": "Jl. Contoh No.12",
+    "id": 11
+  }
+}
+
+
 ### Delete Employee with specific employee id#
 
 POST http://127.0.0.1:8000/api/employee/11/delete
 
+##response
+{
+  "status": "success",
+  "message": "Employee deleted succesfully"
+}
 
 ### get data employee with id ##
 
 GET http://127.0.0.1:8000/api/employee/2
 
-
+##response
+{
+  "status": "success",
+  "data": {
+    "id": 2,
+    "fullname": "Hildegard D'Amore",
+    "email": "harris.estrella@example.org",
+    "mobilephone": "1-657-568-8035 x465",
+    "date_of_birth": "2016-01-28",
+    "address": "319 Maymie Motorway"
+  }
+}
 
 ### add new experience ##
 POST http://127.0.0.1:8000/api/experience
@@ -37,7 +84,78 @@ Content-Type: application/json
     "job_description": "Worked on scalable backend services."
 }
 
+##response
+{
+  "status": "success",
+  "message": "Experience added successfully",
+  "data": [
+    {
+      "id": 2,
+      "fullname": "Hildegard D'Amore",
+      "experiences": [
+        {
+          "id": 4,
+          "company_name": "Nolan-Kassulke",
+          "start_date": "1988-05-28",
+          "end_date": null,
+          "job_description": "Ship Carpenter and Joiner"
+        },
+        {
+          "id": 11,
+          "company_name": "Google",
+          "start_date": "2018-06-01",
+          "end_date": "2021-05-31",
+          "job_description": "Worked on scalable backend services."
+        },
+        {
+          "id": 12,
+          "company_name": "Google",
+          "start_date": "2018-06-01",
+          "end_date": "2021-05-31",
+          "job_description": "Worked on scalable backend services."
+        }
+      ]
+    }
+  ]
+}
+
 
 ### get data experience with employee_id ##
 
 GET http://127.0.0.1:8000/api/experience/2
+
+
+##response
+{
+  "status": "success",
+  "message": "Experience added successfully",
+  "data": [
+    {
+      "id": 2,
+      "fullname": "Hildegard D'Amore",
+      "experiences": [
+        {
+          "id": 4,
+          "company_name": "Nolan-Kassulke",
+          "start_date": "1988-05-28",
+          "end_date": null,
+          "job_description": "Ship Carpenter and Joiner"
+        },
+        {
+          "id": 11,
+          "company_name": "Google",
+          "start_date": "2018-06-01",
+          "end_date": "2021-05-31",
+          "job_description": "Worked on scalable backend services."
+        },
+        {
+          "id": 12,
+          "company_name": "Google",
+          "start_date": "2018-06-01",
+          "end_date": "2021-05-31",
+          "job_description": "Worked on scalable backend services."
+        }
+      ]
+    }
+  ]
+}
