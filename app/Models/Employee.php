@@ -11,7 +11,7 @@ class Employee extends Model
     protected $guarded =['id'];
     public $timestamps = false;
 
-    public function experinces()
+    public function experiences()
     {
         return $this->hasMany(Experience::class, 'employee_id','id');
     }

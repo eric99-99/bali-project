@@ -15,6 +15,5 @@ class ExperienceSeeder extends Seeder
     public function run()
     {
         Experience::factory(10)->create();
-        Experience::factory(10)->create();
     }
 }

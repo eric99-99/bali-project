@@ -21,3 +21,23 @@ POST http://127.0.0.1:8000/api/employee/11/delete
 ### get data employee with id ##
 
 GET http://127.0.0.1:8000/api/employee/2
+
+
+
+### add new experience ##
+POST http://127.0.0.1:8000/api/experience
+Content-Type: application/json
+
+{
+    "employee_id": 2,
+    "company_name": "Google",
+    "job_title": "Backend Developer",
+    "start_date": "2018-06-01",
+    "end_date": "2021-05-31",
+    "job_description": "Worked on scalable backend services."
+}
+
+
+### get data experience with employee_id ##
+
+GET http://127.0.0.1:8000/api/experience/2

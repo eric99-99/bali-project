@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ExperienceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,3 +28,6 @@ Route::get('employee', [EmployeeController::class, 'getAll'] );
 Route::post('employee', [EmployeeController::class, 'store'] );
 Route::post('employee/{id}/delete', [EmployeeController::class, 'destroy'] );
 Route::get('employee/{id}', [EmployeeController::class, 'show'] );
+
+Route::post('experience', [ExperienceController::class, 'store'] );
+Route::get('experience/{id}', [ExperienceController::class, 'show'] );
